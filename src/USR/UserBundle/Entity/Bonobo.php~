@@ -1,0 +1,192 @@
+<?php
+
+namespace USR\UserBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Bonobo
+ *
+ * @ORM\Table(name="bonobo")
+ * @ORM\Entity(repositoryClass="USR\UserBundle\Repository\BonoboRepository")
+ */
+class Bonobo
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+     /**
+     
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+    
+     */
+   
+    protected $nom;
+    
+    /**
+     
+     * @ORM\Column(name="age", type="integer")
+    
+     */
+   
+    protected $age;
+    
+    /**
+     
+     * @ORM\Column(name="famille", type="string", length=255, nullable=true)
+    
+     */
+    protected $famille;
+    
+    /**
+     
+     * @ORM\Column(name="bourriture", type="string", length=255, nullable=true)
+    
+     */
+    protected $nourriture;
+    
+    /**
+     * @ORM\Column(name="race", type="string", length=255, nullable=true)
+     */
+    protected $race;
+     /**
+     * @ORM\ManyToMany(targetEntity="User", mappedBy="bonobos")
+     */
+    private $users;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Bonobo
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set age
+     *
+     * @param integer $age
+     *
+     * @return Bonobo
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * Get age
+     *
+     * @return integer
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * Set famille
+     *
+     * @param string $famille
+     *
+     * @return Bonobo
+     */
+    public function setFamille($famille)
+    {
+        $this->famille = $famille;
+
+        return $this;
+    }
+
+    /**
+     * Get famille
+     *
+     * @return string
+     */
+    public function getFamille()
+    {
+        return $this->famille;
+    }
+
+    /**
+     * Set nourriture
+     *
+     * @param string $nourriture
+     *
+     * @return Bonobo
+     */
+    public function setNourriture($nourriture)
+    {
+        $this->nourriture = $nourriture;
+
+        return $this;
+    }
+
+    /**
+     * Get nourriture
+     *
+     * @return string
+     */
+    public function getNourriture()
+    {
+        return $this->nourriture;
+    }
+
+    /**
+     * Set race
+     *
+     * @param string $race
+     *
+     * @return Bonobo
+     */
+    public function setRace($race)
+    {
+        $this->race = $race;
+
+        return $this;
+    }
+
+    /**
+     * Get race
+     *
+     * @return string
+     */
+    public function getRace()
+    {
+        return $this->race;
+    }
+}

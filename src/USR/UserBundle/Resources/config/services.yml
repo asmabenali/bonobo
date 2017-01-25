@@ -1,0 +1,5 @@
+services:
+  # usr_user.form.registration:
+   # class: USR\UserBundle\Form\InscriptionType
+   # tags: 
+    #      - { name: form.type, alias: usr_user_registration}
