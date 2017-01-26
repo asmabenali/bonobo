@@ -192,24 +192,19 @@ class User extends BaseUser
 
     /**
      * Add user
-     *
-     * @param \USRUserBundle\Entity\User $user
-     *
-     * @return User
      */
-    public function addUser(\USRUserBundle\Entity\User $user)
+    public function addUser($user)
     {
         $this->users[] = $user;
 
-        return $this;
     }
 
     /**
      * Remove user
      *
-     * @param \USRUserBundle\Entity\User $user
+     * 
      */
-    public function removeUser(\USRUserBundle\Entity\User $user)
+    public function removeUser($user)
     {
         $this->users->removeElement($user);
     }

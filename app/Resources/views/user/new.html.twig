@@ -1,0 +1,35 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+   <a href="{{ path('bonobo_index') }}">Voir liste d'amis</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Famille</th>
+                <th>Nourriture</th>
+                <th>Race</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.age }}</td>
+                <td>{{ user.famille }}</td>
+                <td>{{ user.nourriture }}</td>
+                <td>{{ user.race }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('bonobo_add', { 'id': user.id }) }}">add</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

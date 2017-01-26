@@ -1,3 +1,7 @@
+usr_user_bonobo:
+    resource: "@USRUserBundle/Resources/config/routing/user.yml"
+    prefix:   /bonobo
+
 usr_user_homepage:
     path:     /
-    defaults: { _controller: USRUserBundle:Default:index }
+    defaults: { _controller: FOSUserBundle:Security:login }

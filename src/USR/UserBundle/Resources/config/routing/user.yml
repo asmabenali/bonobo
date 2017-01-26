@@ -1,0 +1,29 @@
+bonobo_index:
+    path:     /
+    defaults: { _controller: "USRUserBundle:User:index" }
+    methods:  GET
+
+bonobo_show:
+    path:     /{id}/show
+    defaults: { _controller: "USRUserBundle:User:show" }
+    methods:  GET
+
+bonobo_new:
+    path:     /new
+    defaults: { _controller: "USRUserBundle:User:new" }
+    methods:  [GET, POST]
+
+bonobo_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "USRUserBundle:User:edit" }
+    methods:  [GET, POST]
+
+bonobo_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "USRUserBundle:User:delete" }
+    methods:  GET
+
+bonobo_add:
+    path:     /{id}/add
+    defaults: { _controller: "USRUserBundle:User:add" }
+    methods:  GET
