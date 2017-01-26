@@ -5,24 +5,24 @@
 {% block fos_user_content %}
     <h1>User</h1>
 
-    <table>
+    <table border="2" CELLSPACING="0" CELLPADDING="8">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>{{ user.id }}</td>
-            </tr>
+            </tr><br/>
             <tr>
                 <th>Age</th>
                 <td>{{ user.age }}</td>
-            </tr>
+            </tr><br/>
             <tr>
                 <th>Famille</th>
                 <td>{{ user.famille }}</td>
             </tr>
-            <tr>
+            <tr><br/>
                 <th>Nourriture</th>
                 <td>{{ user.nourriture }}</td>
-            </tr>
+            </tr><br/>
             <tr>
                 <th>Race</th>
                 <td>{{ user.race }}</td>
@@ -32,7 +32,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('bonobo_index') }}">Back to the list</a>
+            <a href="{{ path('bonobo_index') }}">retour au liste d'amis</a>
         </li>
         <li>
             <a href="{{ path('bonobo_edit', { 'id': user.id }) }}">Edit</a>

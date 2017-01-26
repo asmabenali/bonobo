@@ -51,6 +51,7 @@ class UserController extends Controller
             'user' => $user,
         ));
     }
+    
 
     /**
      * Displays a form to edit an existing user entity.
@@ -101,6 +102,28 @@ class UserController extends Controller
         $em->persist($user_db);
         $em->flush();
         return $this->redirectToRoute('bonobo_new');
+    }
+    
+    public function ajoutAction()
+    {
+        $request=$this->get('request');
+        $userr=new USR\UserBundle\Entity\User();
+        if($request->getMethode()=='POST')
+        {
+            $userr->setAge($request->get("age"));
+            $userr->setFamille($request->get("famille"));
+            $userr->setNourriture($request->get("nourriture"));
+            $userr->setRace($request->get("race"));
+            
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($userr);
+            $em->flush();
+        }
+        return $this->render('user/ajout.html.twig', array(
+           
+            'user_id' => $userr->getId()
+        ));
+        
     }
 
     /**

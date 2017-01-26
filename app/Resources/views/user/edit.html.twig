@@ -3,16 +3,23 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-    <h1>User edit</h1>
-
+   <br/><br/>
+    
+    <fieldset>
+         <legend align="left"><div id="fieldtitre"> <h3>Modifier Profil</h3></div></legend>
     {{ form_start(edit_form) }}
+    
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <br/><br/>
+        <input type="submit" value="Modifier" />
     {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('bonobo_index') }}">Back to the list</a>
-        </li>
+       
+     <ul>
+        
+            <a href="{{ path('bonobo_index') }}">Retour au liste d'amis</a>
+        
     </ul>
+    </fieldset>
+
+    
 {% endblock %}

@@ -3,8 +3,10 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-   <a href="{{ path('bonobo_index') }}">Voir liste d'amis</a>
-    <table>
+   <a href="{{ path('bonobo_index') }}">Voir liste d'amis</a><br/><br/><br/>
+   <fieldset>
+        <legend align="left"><div id="fieldtitre"> <h3>Liste des amis</h3></div></legend>
+        <table border="1" CELLSPACING="0" CELLPADDING="5">
         <thead>
             <tr>
                 <th>Age</th>
@@ -23,13 +25,14 @@
                 <td>{{ user.race }}</td>
                 <td>
                     <ul>
-                        <li>
-                            <a href="{{ path('bonobo_add', { 'id': user.id }) }}">add</a>
-                        </li>
+                        
+                            <a href="{{ path('bonobo_add', { 'id': user.id }) }}">Ajouter</a>
+                        
                     </ul>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+   </fieldset>
 {% endblock %}

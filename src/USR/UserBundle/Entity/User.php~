@@ -21,7 +21,7 @@ class User extends BaseUser
     /**
      * @var string $age
      
-     * @ORM\Column(name="age", type="string", length=255, nullable=true)
+     * @ORM\Column(name="age", type="string", length=255, nullable=true, options={"default":"‎10"})
     
      */
     
@@ -30,7 +30,7 @@ class User extends BaseUser
     /**
      * @var string $famille
      
-     * @ORM\Column(name="famille", type="string", length=255, nullable=true)
+     * @ORM\Column(name="famille", type="string", length=255, nullable=true, options={"default":"‎Hominidae"})
     
      */
     protected $famille;
@@ -38,14 +38,14 @@ class User extends BaseUser
     /**
      * @var string $nourriture
      
-     * @ORM\Column(name="bourriture", type="string", length=255, nullable=true)
+     * @ORM\Column(name="bourriture", type="string", nullable=true, length=255, options={"default":"Banan"})
     
      */
     protected $nourriture;
     
     /**
      * @var string $race
-     * @ORM\Column(name="race", type="string", length=255, nullable=true)
+     * @ORM\Column(name="race", type="string", length=255, nullable=true, options={"default":"Pan"})
      */
     protected $race;
     
@@ -192,24 +192,19 @@ class User extends BaseUser
 
     /**
      * Add user
-     *
-     * @param \USRUserBundle\Entity\User $user
-     *
-     * @return User
      */
-    public function addUser(\USRUserBundle\Entity\User $user)
+    public function addUser($user)
     {
         $this->users[] = $user;
 
-        return $this;
     }
 
     /**
      * Remove user
      *
-     * @param \USRUserBundle\Entity\User $user
+     * 
      */
-    public function removeUser(\USRUserBundle\Entity\User $user)
+    public function removeUser($user)
     {
         $this->users->removeElement($user);
     }

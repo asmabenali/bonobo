@@ -4,10 +4,12 @@
 
 {% block fos_user_content %}
    <a href="{{ path('bonobo_edit', { 'id': user_id }) }}">Modifier mon profile</a>
-   <a href="{{ path('bonobo_new') }}">ajouter un ami</a>
+   <a href="{{ path('bonobo_new') }}">ajouter un ami</a><br/><br/>
 
-    <h1>Liste des amis</h1>
-    <table>
+    
+    <fieldset>
+        <legend align="left"><div id="fieldtitre"> <h3>Liste des amis</h3></div></legend>
+        <table border="1" CELLSPACING="0" CELLPADDING="8">
         <thead>
             <tr>
                 <th>Age</th>
@@ -26,13 +28,14 @@
                 <td>{{ user.race }}</td>
                 <td>
                     <ul>
-                        <li>
+                        
                             <a href="{{ path('bonobo_delete', { 'id': user.id }) }}">delete</a>
-                        </li>
+                        
                     </ul>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+        </table>
+    </fieldset>
 {% endblock %}

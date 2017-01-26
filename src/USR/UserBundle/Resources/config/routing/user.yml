@@ -27,3 +27,12 @@ bonobo_add:
     path:     /{id}/add
     defaults: { _controller: "USRUserBundle:User:add" }
     methods:  GET
+    
+bonobo_ajout:
+    path:     /ajout
+    defaults: { _controller: "USRUserBundle:User:ajout" }
+    methods:  GET
+    
+    
+
+   
