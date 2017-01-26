@@ -21,7 +21,7 @@ class User extends BaseUser
     /**
      * @var string $age
      
-     * @ORM\Column(name="age", type="string", length=255, nullable=true, options={"default":"‎10"})
+     * @ORM\Column(name="age", type="string", length=255, nullable=true)
     
      */
     
@@ -30,7 +30,7 @@ class User extends BaseUser
     /**
      * @var string $famille
      
-     * @ORM\Column(name="famille", type="string", length=255, nullable=true, options={"default":"‎Hominidae"})
+     * @ORM\Column(name="famille", type="string", length=255, nullable=true)
     
      */
     protected $famille;
@@ -38,14 +38,14 @@ class User extends BaseUser
     /**
      * @var string $nourriture
      
-     * @ORM\Column(name="bourriture", type="string", nullable=true, length=255, options={"default":"Banan"})
+     * @ORM\Column(name="bourriture", type="string", nullable=true, length=255)
     
      */
     protected $nourriture;
     
     /**
      * @var string $race
-     * @ORM\Column(name="race", type="string", length=255, nullable=true, options={"default":"Pan"})
+     * @ORM\Column(name="race", type="string", length=255, nullable=true)
      */
     protected $race;
     

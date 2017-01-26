@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/src/USR/UserBundle/Controller/UserController.php</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/index.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/new.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/ajout.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/src/USR/UserBundle/Entity/User.php</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/edit.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/show.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/src/USR/UserBundle/Resources/config/routing/user.yml</file>
+        </group>
     </open-files>
 </project-private>
