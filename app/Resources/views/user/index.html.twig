@@ -28,8 +28,12 @@
                 <td>{{ user.race }}</td>
                 <td>
                     <ul>
-                        
-                            <a href="{{ path('bonobo_delete', { 'id': user.id }) }}">delete</a>
+                        <li>
+                            <a href="{{ path('bonobo_delete', { 'id': user.id }) }}">Supprimer</a>
+                        </li>
+                    <li>
+                            <a href="{{ path('bonobo_edit', { 'id': user.id }) }}">Modifier</a>
+                    </li>
                         
                     </ul>
                 </td>

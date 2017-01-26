@@ -10,6 +10,7 @@
             <file>file:/C:/wamp/www/first_symfony/bonobo/src/USR/UserBundle/Entity/User.php</file>
             <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/edit.html.twig</file>
             <file>file:/C:/wamp/www/first_symfony/bonobo/app/Resources/views/user/show.html.twig</file>
+            <file>file:/C:/wamp/www/first_symfony/bonobo/app/config/config.yml</file>
             <file>file:/C:/wamp/www/first_symfony/bonobo/src/USR/UserBundle/Resources/config/routing/user.yml</file>
         </group>
     </open-files>
