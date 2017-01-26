@@ -66,7 +66,7 @@ class UserController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('bonobo_edit', array('id' => $user->getId()));
+            return $this->redirectToRoute('bonobo_index', array('id' => $user->getId()));
         }
 
         return $this->render('USRUserBundle:user:edit.html.twig', array(
@@ -119,7 +119,7 @@ class UserController extends Controller
             $em->persist($userr);
             $em->flush();
         }
-        return $this->render('USRUserBundle:user:ajout.html.twig', array(
+        return $this->render('USRUserBundle:user:index.html.twig', array(
            
             'user_id' => $userr->getId()
         ));
