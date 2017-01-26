@@ -22,7 +22,7 @@ class UserController extends Controller
         $em = $this->getDoctrine()->getManager();
         $user_db = $em->getRepository('USRUserBundle:User')->find($user->getId());
          
-        return $this->render('user/index.html.twig', array(
+        return $this->render('USRUserBundle:user:index.html.twig', array(
             'users' => $user_db->getUsers(),
             'user_id' => $user->getId()
         ));
@@ -36,7 +36,7 @@ class UserController extends Controller
     {
         $em = $this->getDoctrine()->getManager();        
         $users = $em->getRepository('USRUserBundle:User')->findAll();
-        return $this->render('user/new.html.twig', array(
+        return $this->render('USRUserBundle:user:new.html.twig', array(
             'users' => $users,
         ));
     }
@@ -47,7 +47,7 @@ class UserController extends Controller
      */
     public function showAction(User $user)
     {
-        return $this->render('user/show.html.twig', array(
+        return $this->render('USRUserBundle:user:show.html.twig', array(
             'user' => $user,
         ));
     }
@@ -69,7 +69,7 @@ class UserController extends Controller
             return $this->redirectToRoute('bonobo_edit', array('id' => $user->getId()));
         }
 
-        return $this->render('user/edit.html.twig', array(
+        return $this->render('USRUserBundle:user:edit.html.twig', array(
             'user' => $user,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -119,7 +119,7 @@ class UserController extends Controller
             $em->persist($userr);
             $em->flush();
         }
-        return $this->render('user/ajout.html.twig', array(
+        return $this->render('USRUserBundle:user:ajout.html.twig', array(
            
             'user_id' => $userr->getId()
         ));
